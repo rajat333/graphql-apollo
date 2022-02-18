@@ -1,14 +1,18 @@
 {
   "name": "poc2-appolo-graphql-jwt-db",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./src/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "graphql",
+    "apollo",
+    "express"
+  ],
+  "author": "Rajat Khurana",
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^3.6.3",
