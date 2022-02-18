@@ -38,3 +38,12 @@ We have taken Query only in single micorservice i.e account which is User specif
 Now to see reviews done by users. For that we have extended type User in review to add review section for a single user in a query.
 i.e extend type User 
 @external - specify field is from another user.
+
+# Authentication and Authorization
+https://www.apollographql.com/blog/backend/auth/setting-up-authentication-and-authorization-apollo-federation/
+
+# Graphql Shield 
+To avoid DRY principle i.e check req.user exist in each resolver 
+and avoid error in case of no context i.e login user. 
+We add auth at abstraction layer.
+https://github.com/maticzav/graphql-shield

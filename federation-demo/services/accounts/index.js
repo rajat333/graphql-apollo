@@ -41,7 +41,12 @@ const server = new ApolloServer({
       typeDefs,
       resolvers
     }
-  ])
+  ]),
+  context: ({ req }) => {
+    const user = req.headers.user ? JSON.parse(req.headers.user) : null;
+    
+    return { user };
+  }
 });
 
 server.listen({ port: 4001 }).then(({ url }) => {

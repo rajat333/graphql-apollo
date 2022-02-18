@@ -77,13 +77,11 @@ const signIn = async (parent, { username, email, password }, { models }) => {
 		throw new AuthenticationError('Error signing in');
 	}
 
-	return jwt.sign(
-		{
-			id: user._id,
-			exp: 9999999999999
-		},
-		process.env.JWT_SECRET
-	);
+	return  jwt.sign(
+        { "https://awesomeapi.com/graphql": { email, username } },
+        "f1BtnWgD3VKY",
+        { algorithm: "HS256", subject: id, expiresIn: "1d" }
+      );
 };
 
 module.exports = {
