@@ -1,0 +1,25 @@
+{
+  "name": "apollo-federation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently -k npm:server:*",
+    "server:gateway": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/gateway.ts",
+    "server:user": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/user.ts",
+    "server:tweet": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/tweet.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/federation": "^0.35.1",
+    "@apollo/gateway": "^0.48.1",
+    "apollo-server": "^3.6.3",
+    "concurrently": "^7.0.0",
+    "mongoose": "^6.2.2",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.5.0"
+  }
+}

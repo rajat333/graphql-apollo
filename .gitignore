@@ -1,2 +1,4 @@
 poc1-express-graphql/node_modules/*
 poc2-appolo-graphql-jwt-db/node_modules/*
+apollo-federation/node_modules/*
+federation-demo/node_modules/*
