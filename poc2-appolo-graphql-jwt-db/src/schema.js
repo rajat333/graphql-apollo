@@ -4,12 +4,12 @@ module.exports = gql`
    interface Error {
     message: String!
    }
-    union BookResult = Book
+    union BookResult = Book | BookNotFoundError
 
     type Query {
         hello: String,
         books: [Book]!,
-        book(id: ID!): Book
+        book(id: ID!): BookResult
     }
 
     type Book {
